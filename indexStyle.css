@@ -1,0 +1,164 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.greyFont {
+    color: #555555;
+}
+
+.whiteFont {
+    color: #FFFFFF;
+}
+
+.sidebarFont {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Grid Layout */
+
+.masterWrapper {
+    overflow: auto;
+    height: 100%;
+    display: grid;
+
+    grid-template-columns:
+    22rem 1fr;
+
+    grid-template-areas:
+    "sidebar body";
+}
+
+.leftPadding {
+    padding-left: 25px;
+}
+
+/* SIDE BAR */
+
+.about:hover, .settings:hover {
+    background-color: #273339;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color:rgb(34, 44, 50);
+
+    display: grid;
+    grid-template:
+    "logo"          118px
+    "searchBar"     60px
+    "header1"       38px
+    "tree"          1fr
+    "header2"       38px
+    "About"         50px
+    "Setting"       50px
+}
+
+.darker {
+    background-color:#182025;
+}
+
+.lighter {
+    background-color:#1F272C;
+}
+
+.headerColor {
+    color: #3D5053;
+}
+
+.logo {
+    color: #FFFFFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#directorySearch {
+    border-radius: 8px;
+    background-color: #D3D2D3;
+    height: 40px;
+    width: 325px;
+}
+
+#directorySearch::placeholder {
+    padding-left: 10px;
+    font-size: 20px;
+    color: #A6A5A6;
+}
+
+.header {
+    font-size: 20px;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+}
+
+.svg {
+    padding-left: 15px;
+    filter: invert(1);
+}
+
+/* MAIN BODY */
+
+.mainBody {
+    grid-area: body;
+    background-color: rgb(236, 240, 246);
+    display: grid;
+    grid-template:
+        80px
+        1fr
+        1.5rem / 1.5rem 1fr 1.5rem;
+    grid-template-areas: 
+    ". title ."
+    ". body ."
+    ". . .";
+
+    font-family: sans-serif;
+}
+
+.title {
+    grid-area: title;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.mainTitle {
+    font-size: 50px;
+}
+
+.secondTitle {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 3rem;
+    margin-bottom: 0.5rem;
+    color: #919192;
+}
+
+.innerbox {
+    grid-area: body;
+    background-color: rgb(255, 255, 255);
+}
